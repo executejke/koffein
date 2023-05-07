@@ -1,0 +1,151 @@
+
+.title {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+
+  color: #1E1584;
+
+  padding-bottom: 32px;
+
+}
+
+.target-title {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #524E7D;
+}
+
+.target-title:not(:first-child) {
+  padding-left: 88px;
+}
+
+.target-buttons {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+
+  color: #524E7D;
+
+  background: rgba(114, 101, 251, 0.1);
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 16px;
+}
+
+.target-buttons:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav-target {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 48px;
+}
+
+.targets-container {
+  background: linear-gradient(180deg, #F9F9FF 0%, #FFFFFF 0%, #F2F1FF 100.05%);
+  border-radius: 12px;
+  margin-left: 20px;
+  padding: 0px 14px 12px 14px;
+}
+
+.targets-top-container {
+  border-radius: 12px;
+  padding: 32px 40px 32px 88px;
+}
+
+.target-number-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 188px;
+}
+
+.target-number {
+  padding: 6px 14px;
+  background: linear-gradient(180deg, #ACA4FF 0%, #8478FF 0.01%, #5B4BFF 99.98%);
+  border-radius: 12px;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #FFFFFF;
+}
+
+.target-description {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+
+  color: #1E1584;
+
+  padding-left: 20px;
+}
+
+.target-awards {
+  padding-left: 32px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1E1584;
+
+}
+
+.target-award-coins {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 8px;
+}
+
+.target-award-coins span {
+  padding-left: 8px;
+
+}
+
+.target-award-carma {
+  display: flex;
+  align-items: center;
+
+}
+
+.target-award-carma span {
+  padding-left: 8px;
+}
+
+.target {
+  display: flex;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba(114, 101, 251, 0.1);
+  backdrop-filter: blur(52.8455px);
+  border-radius: 12px;
+}
+
+.active {
+  background: linear-gradient(180deg, #ACA4FF 0%, #7B6FFF 0.01%, #5242FF 99.98%);
+  color: #FFFFFF;
+}
+
+

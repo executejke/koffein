@@ -1,0 +1,148 @@
+.container {
+  background: linear-gradient(180deg, #F9F9FF 0%, #FFFFFF 0%, #F2F1FF 100.05%);
+  border-radius: 12px;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user {
+  display: flex;
+}
+
+
+.user-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+  padding-right: 23px;
+  border-right: 1px solid black;
+
+  justify-content: space-around;
+}
+
+.user-pic {
+  border: 1px solid #1E1584;
+  border-radius: 100px;
+}
+
+.user-description {
+  padding-left: 18px;
+}
+
+.user-name {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+
+
+
+  color: #1E1584;
+}
+
+.user-position {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+
+
+  color: rgba(82, 78, 125, 0.8);
+}
+
+.user-level {
+  background: #7265FB;
+  border-radius: 12px;
+
+  font-family: 'Noto Sans';
+  font-size: 12px;
+
+
+
+  color: #FFFFFF;
+
+  padding: 6px 8px;
+  margin-left: 12px;
+}
+
+.title-coins {
+  font-family: 'Noto Sans';
+  font-size: 16px;
+  line-height: 22px;
+
+
+  color: #1E1584;
+
+}
+
+.user-coins {
+  padding-left: 78px;
+  padding-right: 89px;
+  border-right: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.coins-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coin-points {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #1E1584;
+}
+
+.user-carma {
+  padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.carma-wrapper {
+  display: flex;
+}
+
+.title-carma {
+  align-self: center;
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1E1584;
+}
+
+.carma-total {
+  padding-left: 40px;
+}
+
+.carma-points {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #1E1584;
+}
+
+.carma-month, .carma-total {
+
+
+}

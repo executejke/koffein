@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: linear-gradient(180deg, #F9F9FF 0%, #FFFFFF 0%, #F2F1FF 100.05%);
+  border-radius: 12px;
+}
+
+.target {
+  padding: 40px 10px 0 10px;
+}
+
+.target-title {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #1E1584;
+  text-align: center;
+}
+
+.coin-status {
+  padding: 30px 10px;
+  background: linear-gradient(180deg, #ACA4FF 0%, #7B6FFF 0.01%, #5242FF 99.98%);
+  border-radius: 0px 0px 12px 12px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.coin-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 12px;
+  flex-wrap: wrap;
+}
+
+.coin-collect, .coin-count {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #FFFFFF;
+}
+
+.coin-progress {
+  width: 100%;
+  background: rgba(221, 227, 249, 0.5);
+  border-radius: 20px;
+}
+
+.coin-bar {
+  width: 43%;
+  background: #26E27C;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.coin-image {
+  object-fit: cover;
+}

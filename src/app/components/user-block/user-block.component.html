@@ -1,0 +1,29 @@
+<div class="nav-container">
+
+  <app-user></app-user>
+
+  <div class="user-level">
+    <span class="level"> 1 уровень</span>
+    <span class="level-coins">
+        <img src="assets/Coin.png">
+          <p class="count-coin">1346</p>
+      </span>
+  </div>
+
+  <nav class="nav">
+    <button class="nav-button" routerLink="main/targets" [routerLinkActive]="['active']"><img src="assets/Frame%201.png">
+      <span class="btn-text" [routerLinkActive]="['active']">Главная</span></button>
+    <button class="nav-button" routerLink=""><img src="assets/Frame%202.png">
+      <span class="btn-text">Профиль</span></button>
+    <button class="nav-button"><img src="assets/Frame%203.png">
+      <span class="btn-text">Достижения</span></button>
+    <button class="nav-button"><img src="assets/Frame%204.png">
+      <span class="btn-text">Рейтинг</span></button>
+    <button class="nav-button"><img src="assets/Frame%205.png">
+      <span class="btn-text">Тестирование</span></button>
+    <button class="nav-button"><img src="assets/Frame%206.png">
+      <span class="btn-text">Библиотека</span></button>
+    <button class="nav-button"><img src="assets/Frame%207.png">
+      <span class="btn-text">Магазин</span></button>
+  </nav>
+</div>

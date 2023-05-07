@@ -1,0 +1,31 @@
+<div class="targets-container">
+  <div class="targets-top-container">
+    <span class="target-title">Описание</span>
+    <span class="target-title">Награда</span>
+    <span class="target-title">Прогресс</span>
+    <span class="target-title">Время</span>
+  </div>
+
+  <div class="targets">
+    <div class="target" *ngFor="let target of targets$ | async; let i = index">
+      <div class="target-number-description">
+        <div class="target-number">{{ taskCounter + i }}</div>
+        <div class="target-description">{{ target.description }}</div>
+      </div>
+      <div class="target-awards">
+        <div class="target-award-coins">
+          <img src="assets/Coin.png" /><span>+ {{ target.rewards.coins }}</span>
+        </div>
+        <div class="target-award-carma">
+          <img src="assets/KarmaSmall.png" /><span>+ {{ target.rewards.carma }}</span
+          >
+        </div>
+      </div>
+      <app-circle-progress-bar
+        [until]="target.until"
+        [progressValue]="target.progress"
+      ></app-circle-progress-bar>
+      <div class="target-time-until">{{ target.until }}</div>
+    </div>
+  </div>
+</div>
