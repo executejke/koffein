@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TasksService } from '../../services/tasks.service';
+import { Target } from '../../interfaces/Target.interface';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { TargetDialogComponent } from '../target-dialog/target-dialog.component';
+import { TargetsConfig } from '../../models/targets-config';
+
 
 @Component({
   selector: 'app-targets',
@@ -7,15 +12,25 @@ import { TasksService } from '../../services/tasks.service';
   styleUrls: ['./targets.component.scss'],
 })
 export class TargetsComponent implements OnInit {
-  targets$ = this.dbService.targets$;
-  taskCounter: number = 1;
-  until!: string;
+  @Input() items!: Target[] | null;
+  @Output() accept: EventEmitter<Target> = new EventEmitter<Target>();
+  ref!: DynamicDialogRef;
 
+  constructor(
+    public tasksService: TasksService,
+    public dialogService: DialogService,
+    public config: TargetsConfig
+  ) {}
 
-
-  constructor(private dbService: TasksService) {}
-  ngOnInit() {
-
+  show(target: Target) {
+    this.ref = this.dialogService.open(TargetDialogComponent, {
+      data: target,
+    });
   }
 
+  ngOnInit() {}
+
+  acceptTask(item: Target) {
+    this.accept.emit(item);
+  }
 }

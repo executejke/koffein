@@ -3,42 +3,32 @@
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: conic-gradient(#26e27c 280.8deg, #f2f1ff 0deg);
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.progress-bar::before {
-  content: "";
-  position: absolute;
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  background: #e0defb;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #e0defb;
+  }
 
-.progress-bar::after {
-  content: "";
-  position: relative;
-  color: #1e1584;
-  text-align: center;
-  line-height: 80px;
+  &.noProgressBar {
+    background: none;
+    &::before {
+      background: none;
+    }
+  }
 }
 
 .progress-bar span {
-  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
   color: #1e1584;
   z-index: 1;
-}
-
-.noProgressBar {
-  background: none;
-   &::before {
-     background: none;
-   }
 }

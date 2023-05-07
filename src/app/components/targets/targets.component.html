@@ -1,31 +1,50 @@
 <div class="targets-container">
   <div class="targets-top-container">
-    <span class="target-title">Описание</span>
-    <span class="target-title">Награда</span>
-    <span class="target-title">Прогресс</span>
-    <span class="target-title">Время</span>
+    <span class="targets-top-container__title">Описание</span>
+    <span class="targets-top-container__title">Награда</span>
+    <span class="targets-top-container__title">Прогресс</span>
+    <span class="targets-top-container__title">Время</span>
   </div>
-
   <div class="targets">
-    <div class="target" *ngFor="let target of targets$ | async; let i = index">
-      <div class="target-number-description">
-        <div class="target-number">{{ taskCounter + i }}</div>
-        <div class="target-description">{{ target.description }}</div>
-      </div>
-      <div class="target-awards">
-        <div class="target-award-coins">
-          <img src="assets/Coin.png" /><span>+ {{ target.rewards.coins }}</span>
+    <div class="target"
+         *ngFor="let target of items; let i = index"
+         (click)="show(target)"
+
+    >
+      <div class="targets__wrapper">
+        <div class="target__number-description">
+          <app-count-progress
+            [count]="i + 1"
+            [currentProgress]="target.currentProgress"
+            [totalProgress]="target.totalProgress"
+          ></app-count-progress>
+          <div class="target__description">{{ target.description }}</div>
         </div>
-        <div class="target-award-carma">
-          <img src="assets/KarmaSmall.png" /><span>+ {{ target.rewards.carma }}</span
+        <div class="target__awards">
+          <div class="target-award target-award--coins">
+            <img src="assets/Coin.png" alt="coin picture" /><span
+          >+ {{ target.rewards.coins }}</span
           >
+          </div>
+          <div class="target-award target-award--carma">
+            <img src="assets/KarmaSmall.png" alt="carma picture" /><span
+          >+ {{ target.rewards.carma }}</span
+          >
+          </div>
         </div>
+        <app-circle-progress-bar
+          [until]="target.until"
+          [currentProgress]="target.currentProgress"
+          [totalProgress]="target.totalProgress"
+        ></app-circle-progress-bar>
+        <div class="target__time-until">{{ target.until }}</div>
       </div>
-      <app-circle-progress-bar
-        [until]="target.until"
-        [progressValue]="target.progress"
-      ></app-circle-progress-bar>
-      <div class="target-time-until">{{ target.until }}</div>
+      <div class="target__button-container" *ngIf="config.isNew">
+        <button class="target__button">Читать описание</button>
+        <button class="target__button" (click)="acceptTask(target)">Принять</button>
+      </div>
     </div>
   </div>
 </div>
+
+

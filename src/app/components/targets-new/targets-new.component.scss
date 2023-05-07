@@ -1,0 +1,33 @@
+:host {
+  --count-background: url('~src/assets/fire-icon.png');
+  --count-visible: transparent;
+}
+
+button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 16px;
+  background: linear-gradient(180deg, #ACA4FF 0%, #7B6FFF 0.01%, #5242FF 99.98%);
+  color: #FFFFFF;
+
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: darkblue;
+  color: wheat;
+  margin-bottom: auto;
+}
+
+.buttons__container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

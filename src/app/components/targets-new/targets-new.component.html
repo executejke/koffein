@@ -1,0 +1,5 @@
+<app-targets [items]="targets$ | async" (accept)="onAccept($event)"></app-targets>
+<div class="buttons__container">
+  <button (click)="generateTask()">Сгенерить таск</button>
+  <button (click)="deleteAllTasks()">Удалить всё</button>
+</div>

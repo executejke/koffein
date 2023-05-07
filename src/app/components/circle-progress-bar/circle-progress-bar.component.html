@@ -1,11 +1,12 @@
-<div class="progress-bar-container">
-  <div class="progress-bar" [ngClass]="{noProgressBar: until.includes('За каждый')}">
-    <progress
-      value="75"
-      min="0"
-      max="100"
-      style="visibility: hidden; height: 0; width: 0"
-    ></progress>
-    <span>{{ progressValue }}</span>
-  </div>
+<div class="progress-bar"
+     [ngStyle]="{'background': progressBarBackground()}"
+     [ngClass]="{'noProgressBar':  hideProgressBar()}"
+>
+  <progress
+    value="75"
+    min="0"
+    max="100"
+    style="visibility: hidden; height: 0; width: 0"
+  ></progress>
+  <span>{{ displayProgressValue }}</span>
 </div>

@@ -1,4 +1,12 @@
+@import "primeicons/primeicons.css";
+
+:root {
+  --task-in-progress: url('~src/assets/cancel-icon.png');
+  --task-is-done: url('~src/assets/done-icon.png');
+}
+
 * {
+  font-family: "Noto Sans", "sans-serif";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,6 +16,8 @@ ul {
   list-style: none;
 }
 
-:root {
-  --done: 'E:\front\MainJs\myApp\src\assets\done-icon.png';
+p-badge {
+  position: absolute;
+  right: -15px;
+  top: -15px;
 }

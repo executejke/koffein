@@ -1,19 +1,38 @@
 <div class="container">
-  <div class="nav-target">
-    <h1 class="title">Цели</h1>
-    <div class="target-wrapper">
-      <button class="target-buttons" [routerLink]="['', 'main', 'targets', 'active']" [routerLinkActive]="'active'">Активные</button>
-      <button class="target-buttons" >Архив</button>
-      <button class="target-buttons">Новые</button>
+  <div class="header">
+    <div class="header__wrapper">
+      <div class="header__buttons_wrapper">
+        <h1 class="header__title">Цели</h1>
+        <div class="header__buttons">
+        <button
+          class="header__button"
+          [routerLink]="['', 'main', 'active']"
+          [routerLinkActive]="'active'"
+        >
+          Активные
+        </button>
+        <button
+          class="header__button"
+          [routerLink]="['', 'main', 'archive']"
+          [routerLinkActive]="'active'"
+        >
+          Архив
+        </button>
+        <button
+          class="header__button"
+          [routerLink]="['', 'main', 'new']"
+          [routerLinkActive]="'active'"
+        >
+          Новые
+        </button>
+      </div>
+      </div>
+        <router-outlet></router-outlet>
+
     </div>
-
-
+    <div class="header__cards">
+      <app-carma></app-carma>
+      <app-coin-target></app-coin-target>
+    </div>
   </div>
-
-  <router-outlet></router-outlet>
-
 </div>
-
-
-
-

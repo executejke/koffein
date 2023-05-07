@@ -14,9 +14,18 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { UserComponent } from './components/user/user.component';
 import { HttpClientModule } from "@angular/common/http";
 import {AngularFireModule} from "@angular/fire/compat";
-import {environment} from "../environments/environment";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
-
+import { TargetsArchiveComponent } from './components/targets-archive/targets-archive.component';
+import { TargetsActiveComponent } from './components/targets-active/targets-active.component';
+import { TargetsNewComponent } from './components/targets-new/targets-new.component';
+import {DialogService, DynamicDialogModule} from "primeng/dynamicdialog";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { TargetDialogComponent } from './components/target-dialog/target-dialog.component';
+import { TargetsWrapperComponent } from './components/targets-wrapper/targets-wrapper.component';
+import { CountProgressComponent } from './components/count-progress/count-progress.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import {BadgeModule} from "primeng/badge";
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -31,6 +40,14 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
     CircleProgressBarComponent,
     ProfilePageComponent,
     UserComponent,
+    TargetsArchiveComponent,
+    TargetsActiveComponent,
+    TargetsNewComponent,
+    TargetDialogComponent,
+    TargetsWrapperComponent,
+    CountProgressComponent,
+    BadgeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +62,12 @@ import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
       messagingSenderId: "558286321121",
       appId: "1:558286321121:web:70350c669e473ca201cea0"
     }),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule,
+    DynamicDialogModule,
+    BadgeModule,
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
