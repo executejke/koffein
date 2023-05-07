@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CircleProgressBarComponent implements OnInit {
   @Input() progressValue!: string;
   @Input() until!: string;
-  background = 'none';
 
   ngOnInit() {
 
